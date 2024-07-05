@@ -1,15 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\http\Controllers\UserController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.auth.auth-login');
 });
 
-Route::get('/dashboard', function () {
-    return view('pages.dashboard', ['type_menu' => 'dashboard']);
+Route::middleware(['auth'])->group(function () {
+    Route::get('home', function () {
+        return view('pages.dashboard', ['type_menu' => 'home']);
+    })->name('home');
+
+    Route::resource('users', UserController::class); // Semua Add,edit search di kelola oleh route
 });
 
-//Route::get('/login', function () {
-//    return view('pages.auth.auth-login');
-//});
