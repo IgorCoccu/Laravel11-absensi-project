@@ -21,5 +21,17 @@ class DatabaseSeeder extends Seeder
             'email' => 'igor@felexindo.com',
             'password' => Hash::make('1234567890'),
         ]);
+
+        //data dummy for company
+        \App\Models\Company::create([
+            'name'=>'PT Felixindo',
+            'email'=>'igor@felixindo.com',
+            'address'=>'Jl. Depok',
+            'latitude'=>'-7.747033',
+            'longitude'=>'110.355389',
+            'radius_km'=>'0.5',
+            'time_in'=>'08:00',
+            'time_out'=>'17:00',
+        ]);
     }
 }

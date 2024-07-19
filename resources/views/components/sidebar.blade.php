@@ -14,8 +14,15 @@
                 <ul class="dropdown-menu">
                     <li class='{{ Request::is('users') ? 'active' : '' }}'>
                         <a class="nav-link"
-                            href="{{route('users.index') }}">User</a>
+                            href="{{route('companies.show',1) }}">Company
+                        </a>
                     </li>
+                    <li class='{{ Request::is('users') ? 'active' : '' }}'>
+                        <a class="nav-link"
+                            href="{{route('users.index') }}">User
+                        </a>
+                    </li>
+
                     <li class="{{ Request::is('dashboard-ecommerce-dashboard') ? 'active' : '' }}">
                         <a class="nav-link"
                             href="{{ url('dashboard-ecommerce-dashboard') }}">Departement</a>
