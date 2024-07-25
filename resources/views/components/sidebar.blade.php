@@ -27,6 +27,27 @@
                         <a class="nav-link"
                             href="{{ url('dashboard-ecommerce-dashboard') }}">Departement</a>
                     </li>
+
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#"
+                    class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Transaction</span></a>
+                <ul class="dropdown-menu">
+
+                    <li class='{{ Request::is('users') ? 'active' : '' }}'>
+                        <a class="nav-link"
+                            href="{{route('attendances.index') }}">Attendance
+                        </a>
+                    </li>
+                    <li class='{{ Request::is('users') ? 'active' : '' }}'>
+                        <a class="nav-link"
+                            href="{{route('permissions.index') }}">Permission
+                        </a>
+                    </li>
+
+
+
                 </ul>
             </li>
 
